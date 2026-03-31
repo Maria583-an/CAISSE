@@ -1,0 +1,70 @@
+// style.scss
+
+$primary-color: #007BFF; // Bleu principal
+$secondary-color: #ffffff; // Blanc
+$font-stack: 'Segoe UI', Arial, sans-serif;
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  background-color: $secondary-color;
+  color: #333;
+}
+
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  min-height: 80vh;
+
+  .sidebar {
+    width: 20%;
+    background-color: lighten($primary-color, 20%);
+    padding: 1rem;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0.5rem 0;
+
+        a {
+          text-decoration: none;
+          color: darken($primary-color, 20%);
+          font-weight: bold;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 2rem;
+
+    h2 {
+      margin-top: 0;
+      color: $primary-color;
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 1rem;
+}
